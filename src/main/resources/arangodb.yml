@@ -1,0 +1,9 @@
+asset:
+  db:
+    arangodb:
+      dbName: db-asset
+      host: arangodb
+      port: 8529
+      timeout: 0
+      user: root
+      password: root

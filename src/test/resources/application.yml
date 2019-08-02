@@ -1,0 +1,33 @@
+micronaut:
+  application:
+    name: asset-ws
+  server:
+    port: 8085
+  security:
+    enabled: false
+  cache:
+    user-cache:
+      expire-after-write: 10m
+  heartbeat:
+    interval: 30s
+sso-checker:
+  url: https://test.dd.com
+metrics:
+  enabled: true
+  export:
+graphite:
+  enabled: true
+  step: PT1M
+  host: carbon.dd.com
+  port: 2003
+---
+asset:
+  filepath: ./src/test/resources/import/
+---
+rabbitmq:
+  exchange:
+    fileimport: fileimport
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
